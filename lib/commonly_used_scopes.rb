@@ -1,5 +1,4 @@
 require "commonly_used_scopes/engine"
-
 module CommonlyUsedScopes
   module ClassMethods
     def commonly_used_scopes
@@ -18,4 +17,4 @@ module CommonlyUsedScopes
     end
   end
 end
-
+ActiveRecord::Base.send(:include, CommonlyUsedScopes)
