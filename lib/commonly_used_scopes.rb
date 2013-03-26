@@ -4,6 +4,7 @@ module CommonlyUsedScopes
     def commonly_used_scopes
       # Add some scopes here.
       class_eval <<-DELIM
+        scope :order_by_id, ->{ order :id }
         scope :order_by_id_desc, ->{ order 'id desc' }
       DELIM
     end
